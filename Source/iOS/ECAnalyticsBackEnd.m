@@ -80,7 +80,7 @@
 //! Perform logging of untimed event - to be overriden by implementations.
 // --------------------------------------------------------------------------
 
-- (void)eventUntimed:(NSString*)event forObject:(id)object parameters:(NSDictionary*)parameters;
+- (void)eventUntimed:(NSString*)event forObject:(id)object parameters:(NSDictionary*)parameters
 {
 	ECDebug(AnalyticsChannel, @"subclasses should implement this method");
 }
@@ -89,7 +89,7 @@
 //! Create a timed event - to be overriden by implementations.
 // --------------------------------------------------------------------------
 
-- (ECAnalyticsEvent*)eventStart:(NSString*)event forObject:(id)object parameters:(NSDictionary*)parameters;
+- (ECAnalyticsEvent*)eventStart:(NSString*)event forObject:(id)object parameters:(NSDictionary*)parameters
 {
 	ECDebug(AnalyticsChannel, @"subclasses should implement this method");
 	
@@ -109,7 +109,7 @@
 //! Perform error logging - to be overriden by implementations.
 // --------------------------------------------------------------------------
 
-- (void)error:(NSError*)error message:(NSString*)message;
+- (void)error:(NSError*)error message:(NSString*)message
 {
 	ECDebug(AnalyticsChannel, @"subclasses should implement this method");
 }

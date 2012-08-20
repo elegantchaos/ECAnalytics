@@ -15,8 +15,6 @@
 #import "ECAnalyticsEventTarget.h"
 #import "ECAnalyticsStandardKeys.h"
 
-#import "ECAssertion.h"
-
 #pragma mark - Globals
 
 static ECAnalyticsEngine* gExceptionAnalyticsEngine = nil;

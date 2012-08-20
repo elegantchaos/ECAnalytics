@@ -25,7 +25,7 @@
 //! Initialise with an optional dictionary of event parameters.
 // --------------------------------------------------------------------------
 
-- (id) initWithName:(NSString*)eventName parameters:(NSDictionary*)parametersOrNil;
+- (id) initWithName:(NSString*)eventName parameters:(NSDictionary*)parametersOrNil
 {
 	if ((self = [super init]) != nil)
 	{

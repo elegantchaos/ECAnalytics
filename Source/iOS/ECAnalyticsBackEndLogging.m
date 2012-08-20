@@ -6,21 +6,24 @@
 //  This source code is distributed under the terms of Elegant Chaos's 
 //  liberal license: http://www.elegantchaos.com/license/liberal
 // --------------------------------------------------------------------------
-#import "ECAnalyticsBackEndNull.h"
+#import "ECAnalyticsBackEndLogging.h"
 #import "ECAnalyticsBackEnd.h"
 
 #import "ECAnalyticsEvent.h"
+#import "ECAnalyticsLogging.h"
 
-@implementation ECAnalyticsBackEndNull
+
+@implementation ECAnalyticsBackEndLogging
 
 // --------------------------------------------------------------------------
 //! Perform one-time initialisation of the engine.
 // --------------------------------------------------------------------------
 
-- (void)startupWithEngine:(ECAnalyticsEngine*)engineIn;
+- (void)startupWithEngine:(ECAnalyticsEngine*)engineIn
 {
     self.engine = engineIn;
     
+	ECDebug(AnalyticsChannel, @"startup logging Analytics engine");
 }
 
 // --------------------------------------------------------------------------
@@ -29,6 +32,7 @@
 
 - (void)shutdown
 {
+	ECDebug(AnalyticsChannel, @"shutdown logging Analytics engine");
 }
 
 // --------------------------------------------------------------------------
@@ -37,16 +41,19 @@
 
 - (void)eventUntimed:(NSString*)event forObject:(id)object parameters:(NSDictionary*)parameters
 {
+	ECDebug(AnalyticsChannel, @"logged untimed event %@ with parameters %@", event, parameters);
 }
 
 // --------------------------------------------------------------------------
 //! Start logging a timed event. Returns the event, which can be ended by calling logTimedEventEnd:
 // --------------------------------------------------------------------------
 
-- (ECAnalyticsEvent*)eventStart:(NSString*)eventName forObject:(id)object parameters:(NSDictionary*)parameters;
+- (ECAnalyticsEvent*)eventStart:(NSString*)eventName forObject:(id)object parameters:(NSDictionary*)parameters
 {
+	ECDebug(AnalyticsChannel, @"started timed event %@ with parameters %@", eventName, parameters);
+	
 	ECAnalyticsEvent* event = [[[ECAnalyticsEvent alloc] initWithName:eventName parameters:parameters] autorelease];
-
+	
 	return event;
 }
 
@@ -56,6 +63,7 @@
 
 - (void)eventEnd:(ECAnalyticsEvent*)event
 {
+	ECDebug(AnalyticsChannel, @"finished timed event %@ with parameters %@", event.name, event.parameters);
 }
 
 // --------------------------------------------------------------------------
@@ -64,6 +72,7 @@
 
 - (void)error:(NSError*)error message:(NSString*)message
 {
+	ECDebug(AnalyticsChannel, @"logged error %@: %@ ", error, message);
 }
 
 // --------------------------------------------------------------------------
@@ -72,6 +81,7 @@
 
 - (void)exception:(NSException*)exception
 {
+	ECDebug(AnalyticsChannel, @"logged exception %@", exception);
 }
 
 @end
