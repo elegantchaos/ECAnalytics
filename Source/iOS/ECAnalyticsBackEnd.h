@@ -21,7 +21,7 @@
 
 #pragma mark - Public Properties
 
-@property (nonatomic, retain) ECAnalyticsEngine* engine;
+@property (strong, nonatomic) ECAnalyticsEngine* engine;
 
 #pragma mark - Public Methods
 
