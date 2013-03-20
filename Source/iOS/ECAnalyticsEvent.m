@@ -107,7 +107,7 @@
     {
         double minutesLog = log2(minutes);
         double roundedLog = round(minutesLog);
-        long roundedMinutes = pow(2.0, roundedLog);
+        long roundedMinutes = (long) pow(2.0, roundedLog);
         if (roundedMinutes > 1) 
         {
             result = [NSString stringWithFormat:@"%ld Minutes", roundedMinutes];
