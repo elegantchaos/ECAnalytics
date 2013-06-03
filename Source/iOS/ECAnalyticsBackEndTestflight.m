@@ -21,7 +21,7 @@
 //! Perform one-time initialisation of the engine.
 // --------------------------------------------------------------------------
 
-- (void)startupWithEngine:(ECAnalyticsEngine*)engineIn;
+- (void)startupWithEngine:(ECAnalyticsEngine*)engineIn
 {
     self.engine = engineIn;
     
