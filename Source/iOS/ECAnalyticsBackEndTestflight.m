@@ -23,7 +23,16 @@
 - (void)startupWithEngine:(ECAnalyticsEngine*)engineIn
 {
     self.engine = engineIn;
-    
+
+#if EC_DEBUG
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
+	[TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+
+#pragma clang diagnostic pop
+#endif
+
     NSString* token = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"TestFlightToken"];
     if (token)
     {
