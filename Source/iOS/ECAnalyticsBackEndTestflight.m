@@ -8,8 +8,7 @@
 // --------------------------------------------------------------------------
 
 #import "ECAnalyticsBackEndTestflight.h"
-#import "ECAnalyticsLogging.h"
-#import "ECAnalyticsEvent.h"
+#import <ECAnalytics/ECAnalytics.h>
 
 #import "TestFlight.h"
 
