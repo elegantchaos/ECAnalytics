@@ -5,3 +5,5 @@
 // --------------------------------------------------------------------------
 
 #import "ECAnalyticsEngine.h"
+#import "ECAnalyticsEvent.h"
+#import "ECAnalyticsStandardKeys.h"

@@ -52,6 +52,14 @@
 		2204C77715E27E5600F71E15 /* ECAnalyticsStandardKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAnalyticsStandardKeys.m; sourceTree = "<group>"; };
 		2229674F1354EDC5005F42E7 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		2229E53D175CE5B7001ADD91 /* ECAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECAnalytics.h; sourceTree = "<group>"; };
+		2229E550175CF4C8001ADD91 /* ECAnalyticsBackEndTestflight.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAnalyticsBackEndTestflight.m; sourceTree = "<group>"; };
+		2229E551175CF4C8001ADD91 /* ECAnalyticsBackEndCrashlytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECAnalyticsBackEndCrashlytics.h; sourceTree = "<group>"; };
+		2229E552175CF4C8001ADD91 /* ECAnalyticsBackEndCrashlytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAnalyticsBackEndCrashlytics.m; sourceTree = "<group>"; };
+		2229E553175CF4C8001ADD91 /* ECAnalyticsBackEndFlurry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECAnalyticsBackEndFlurry.h; sourceTree = "<group>"; };
+		2229E554175CF4C8001ADD91 /* ECAnalyticsBackEndFlurry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAnalyticsBackEndFlurry.m; sourceTree = "<group>"; };
+		2229E555175CF4C8001ADD91 /* ECAnalyticsBackEndTestflight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECAnalyticsBackEndTestflight.h; sourceTree = "<group>"; };
+		2229E556175CF4C8001ADD91 /* ECAnalyticsBackEndWebtrends.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECAnalyticsBackEndWebtrends.h; sourceTree = "<group>"; };
+		2229E557175CF4C8001ADD91 /* ECAnalyticsBackEndWebtrends.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAnalyticsBackEndWebtrends.m; sourceTree = "<group>"; };
 		2237ECE314F5644C00085BF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		223CBAE61205C6380008A641 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2251BA1215DBCC4A00F2FE40 /* ECAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +189,21 @@
 			name = Testing;
 			sourceTree = "<group>";
 		};
+		2229E54F175CF4A6001ADD91 /* Backends requiring SDKs */ = {
+			isa = PBXGroup;
+			children = (
+				2229E551175CF4C8001ADD91 /* ECAnalyticsBackEndCrashlytics.h */,
+				2229E552175CF4C8001ADD91 /* ECAnalyticsBackEndCrashlytics.m */,
+				2229E553175CF4C8001ADD91 /* ECAnalyticsBackEndFlurry.h */,
+				2229E554175CF4C8001ADD91 /* ECAnalyticsBackEndFlurry.m */,
+				2229E555175CF4C8001ADD91 /* ECAnalyticsBackEndTestflight.h */,
+				2229E550175CF4C8001ADD91 /* ECAnalyticsBackEndTestflight.m */,
+				2229E556175CF4C8001ADD91 /* ECAnalyticsBackEndWebtrends.h */,
+				2229E557175CF4C8001ADD91 /* ECAnalyticsBackEndWebtrends.m */,
+			);
+			name = "Backends requiring SDKs";
+			sourceTree = "<group>";
+		};
 		223CBAE11205C5930008A641 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +275,7 @@
 				2204C77515E27E5600F71E15 /* ECAnalyticsLogging.m */,
 				2204C77615E27E5600F71E15 /* ECAnalyticsStandardKeys.h */,
 				2204C77715E27E5600F71E15 /* ECAnalyticsStandardKeys.m */,
+				2229E54F175CF4A6001ADD91 /* Backends requiring SDKs */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
