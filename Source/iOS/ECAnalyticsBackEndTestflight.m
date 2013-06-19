@@ -28,7 +28,9 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
+#if !defined(__MAC_10_9)
 	[TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+#endif
 
 #pragma clang diagnostic pop
 #endif
