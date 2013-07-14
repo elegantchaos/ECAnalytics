@@ -10,7 +10,7 @@
 
 @end
 
-@implementation ECAppKitTests
+@implementation ECAnalyticsTests
 
 - (void)testExample
 {
