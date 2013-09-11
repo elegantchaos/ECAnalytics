@@ -22,17 +22,6 @@
 
 @implementation ECAnalyticsBackEnd
 
-@synthesize engine;
-
-#pragma mark - Lifecycle
-
-- (void)dealloc
-{
-    [engine release];
-    
-    [super dealloc];
-}
-
 #pragma mark - Engine Implementation Methods
 
 // --------------------------------------------------------------------------

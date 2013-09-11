@@ -52,7 +52,7 @@
 {
 	ECDebug(AnalyticsChannel, @"started timed event %@ with parameters %@", eventName, parameters);
 	
-	ECAnalyticsEvent* event = [[[ECAnalyticsEvent alloc] initWithName:eventName parameters:parameters] autorelease];
+	ECAnalyticsEvent* event = [[ECAnalyticsEvent alloc] initWithName:eventName parameters:parameters];
 	
 	return event;
 }

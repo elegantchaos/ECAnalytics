@@ -66,7 +66,7 @@
 
 - (ECAnalyticsEvent*)eventStart:(NSString*)eventName forObject:(id)object parameters:(NSDictionary*)parameters
 {
-	ECAnalyticsEvent* event = [[[ECAnalyticsEvent alloc] initWithName:eventName parameters:parameters] autorelease];
+	ECAnalyticsEvent* event = [[ECAnalyticsEvent alloc] initWithName:eventName parameters:parameters];
 	
 	return event;
 }

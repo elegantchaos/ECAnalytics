@@ -42,19 +42,6 @@
 	return self;
 }
 
-// --------------------------------------------------------------------------
-//! Clean up and release retained objects.
-// --------------------------------------------------------------------------
-
-- (void) dealloc
-{
-    [name release];
-    [parameters release];
-    [start release];
-    
-	[super dealloc];
-}
-
 #pragma mark - Parameters
 
 // --------------------------------------------------------------------------
@@ -66,7 +53,6 @@
     NSMutableDictionary* updated = [self.parameters mutableCopy];
     [updated addEntriesFromDictionary:updates];
     self.parameters = updated;
-    [updated release];
 }
 
 // --------------------------------------------------------------------------
