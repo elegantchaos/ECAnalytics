@@ -75,7 +75,7 @@ static void uncaughtExceptionHandler(NSException *exception);
 
 - (id)initWithBackEndClass:(Class)backEndClass
 {
-    ECAnalyticsBackEnd* newBackEnd = [[[backEndClass alloc] init] autorelease];
+    ECAnalyticsBackEnd* newBackEnd = [[backEndClass alloc] init];
     
     return [self initWithBackEnd:newBackEnd];
 }
@@ -99,19 +99,6 @@ static void uncaughtExceptionHandler(NSException *exception);
 }
 
 
-// --------------------------------------------------------------------------
-//! Clean up and release retained objects.
-// --------------------------------------------------------------------------
-
-- (void)dealloc
-{
-    [backEnd release];
-    [events release];
-    [eventNameMappings release];
-	
-	[super dealloc];
-}
-
 #pragma mark - Management
 
 // --------------------------------------------------------------------------
@@ -121,7 +108,7 @@ static void uncaughtExceptionHandler(NSException *exception);
 - (void)startupUsingExceptionHandler:(BOOL)instalExceptionHandler
 {
 	[self.backEnd startupWithEngine:self];
-	self.events = [[[NSMutableSet alloc] init] autorelease];
+	self.events = [[NSMutableSet alloc] init];
     
     if (instalExceptionHandler && (![self.backEnd hasOwnExceptionHandler]))
     {
@@ -241,7 +228,7 @@ static void uncaughtExceptionHandler(NSException *exception);
                       
     else if ([object isKindOfClass:[NSDictionary class]]) 
     {
-        parameters = [[(NSDictionary*) object mutableCopy] autorelease];
+        parameters = [(NSDictionary*) object mutableCopy];
     }
 
     else
