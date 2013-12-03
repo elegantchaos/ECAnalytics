@@ -75,7 +75,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2274B38C14F56896003B8A0B"
-               BuildableName = "ECAnalyticsIOSTests.octest"
+               BuildableName = "ECAnalyticsIOSTests.xctest"
                BlueprintName = "ECAnalyticsIOSTests"
                ReferencedContainer = "container:ECAnalytics.xcodeproj">
             </BuildableReference>
