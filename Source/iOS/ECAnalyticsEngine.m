@@ -294,11 +294,11 @@ static void uncaughtExceptionHandler(NSException *exception);
     {
         if (errorOrNil) 
         {
-            messageOrNil = [NSString stringWithFormat:@"%@ (%d): %@", [errorOrNil domain], [errorOrNil code], [errorOrNil localizedDescription]];
+            messageOrNil = [NSString stringWithFormat:@"%@ (%ld): %@", [errorOrNil domain], (long)[errorOrNil code], [errorOrNil localizedDescription]];
         }
         else 
         {
-            messageOrNil = [NSString stringWithFormat:@"%@ (%d)", [errorOrNil domain], [errorOrNil code]];
+            messageOrNil = [NSString stringWithFormat:@"%@ (%ld)", [errorOrNil domain], (long)[errorOrNil code]];
         }
     }
     
