@@ -361,7 +361,7 @@
 			name = ECAnalyticsIOSTests;
 			productName = blahTests;
 			productReference = 2274B38D14F56896003B8A0B /* ECAnalyticsIOSTests.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -369,7 +369,8 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0630;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Elegant Chaos";
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "ECAnalytics" */;
