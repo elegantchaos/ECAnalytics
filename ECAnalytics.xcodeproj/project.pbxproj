@@ -23,12 +23,10 @@
 		2204C78D15E27E5600F71E15 /* ECAnalyticsStandardKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 2204C77615E27E5600F71E15 /* ECAnalyticsStandardKeys.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2204C78E15E27E5600F71E15 /* ECAnalyticsStandardKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 2204C77715E27E5600F71E15 /* ECAnalyticsStandardKeys.m */; };
 		2229E53E175CE5B7001ADD91 /* ECAnalytics.h in Headers */ = {isa = PBXBuildFile; fileRef = 2229E53D175CE5B7001ADD91 /* ECAnalytics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22339C3915DEC1C60017BC6B /* ECAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2251BA1215DBCC4A00F2FE40 /* ECAnalytics.framework */; };
-		22339C3A15DEC1E30017BC6B /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2251BBA615DC18ED00F2FE40 /* ECUnitTests.framework */; };
+		224C4A301B29987100729388 /* ECAnalytics.framework in Resources */ = {isa = PBXBuildFile; fileRef = 2251BA1215DBCC4A00F2FE40 /* ECAnalytics.framework */; };
+		224C4A321B29989500729388 /* ECLogging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224C4A311B29989500729388 /* ECLogging.framework */; };
+		224C4A341B2998A300729388 /* ECUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224C4A331B2998A300729388 /* ECUnitTests.framework */; };
 		224CA8EB1792CB54007369FA /* ECAnalyticsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CA8EA1792CB54007369FA /* ECAnalyticsTests.m */; };
-		2274B38E14F56896003B8A0B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283A3CD14F52E93009142F7 /* SenTestingKit.framework */; };
-		2274B39014F56896003B8A0B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2274B38F14F56896003B8A0B /* UIKit.framework */; };
-		2274B39114F56896003B8A0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237ECE314F5644C00085BF5 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +61,10 @@
 		2229E557175CF4C8001ADD91 /* ECAnalyticsBackEndWebtrends.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECAnalyticsBackEndWebtrends.m; sourceTree = "<group>"; };
 		2237ECE314F5644C00085BF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		223CBAE61205C6380008A641 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		224C4A2D1B2995B200729388 /* IOSUnitTestShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = IOSUnitTestShared.xcconfig; sourceTree = "<group>"; };
+		224C4A2E1B29967000729388 /* IOSShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = IOSShared.xcconfig; sourceTree = "<group>"; };
+		224C4A311B29989500729388 /* ECLogging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ECLogging.framework; path = ../ECLogging/build/Debug/ECLogging.framework; sourceTree = "<group>"; };
+		224C4A331B2998A300729388 /* ECUnitTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ECUnitTests.framework; path = ../ECLogging/build/Debug/ECUnitTests.framework; sourceTree = "<group>"; };
 		224CA8EA1792CB54007369FA /* ECAnalyticsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECAnalyticsTests.m; sourceTree = "<group>"; };
 		2251BA1215DBCC4A00F2FE40 /* ECAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECAnalytics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2251BA1315DBCC4A00F2FE40 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -113,11 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22339C3A15DEC1E30017BC6B /* ECUnitTests.framework in Frameworks */,
-				22339C3915DEC1C60017BC6B /* ECAnalytics.framework in Frameworks */,
-				2274B38E14F56896003B8A0B /* SenTestingKit.framework in Frameworks */,
-				2274B39014F56896003B8A0B /* UIKit.framework in Frameworks */,
-				2274B39114F56896003B8A0B /* Foundation.framework in Frameworks */,
+				224C4A341B2998A300729388 /* ECUnitTests.framework in Frameworks */,
+				224C4A321B29989500729388 /* ECLogging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +148,8 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				224C4A331B2998A300729388 /* ECUnitTests.framework */,
+				224C4A311B29989500729388 /* ECLogging.framework */,
 				2204C5EC15E1536200F71E15 /* ECCore.framework */,
 				2204C5ED15E1536200F71E15 /* ECLogging.framework */,
 				2251BBAD15DC1B4E00F2FE40 /* ECConfig.framework */,
@@ -234,8 +235,10 @@
 			children = (
 				2251BA4315DBCD3900F2FE40 /* IOSDebug.xcconfig */,
 				2251BA4415DBCD3900F2FE40 /* IOSRelease.xcconfig */,
+				224C4A2E1B29967000729388 /* IOSShared.xcconfig */,
 				2251BA5C15DBD68500F2FE40 /* IOSUnitTestDebug.xcconfig */,
 				2251BA5D15DBD68500F2FE40 /* IOSUnitTestRelease.xcconfig */,
+				224C4A2D1B2995B200729388 /* IOSUnitTestShared.xcconfig */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -369,8 +372,8 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0630;
-				LastUpgradeCheck = 0630;
+				LastTestingUpgradeCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Elegant Chaos";
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "ECAnalytics" */;
@@ -408,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				224C4A301B29987100729388 /* ECAnalytics.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +504,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2251BA5C15DBD68500F2FE40 /* IOSUnitTestDebug.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Resources/ECAnalyticsTests.plist;
 			};
 			name = Debug;
 		};
@@ -508,7 +511,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2251BA5D15DBD68500F2FE40 /* IOSUnitTestRelease.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Resources/ECAnalyticsTests.plist;
 			};
 			name = Release;
 		};
